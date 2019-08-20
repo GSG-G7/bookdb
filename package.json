@@ -1,0 +1,41 @@
+{
+  "name": "bookdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test node ./tests/test.js |tap-spec",
+    "start":"NODE_ENV=production nodemon ./src/index.js",
+    "dev":"NODE_ENV=development nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G7/bookdb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G7/bookdb/issues"
+  },
+  "homepage": "https://github.com/GSG-G7/bookdb#readme",
+  "devDependencies": {
+    "eslint": "^6.2.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  },
+  "dependencies": {
+    "env2": "^2.2.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "pg": "^7.12.1"
+  }
+}
