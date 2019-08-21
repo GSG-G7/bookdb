@@ -36,7 +36,7 @@ html {
   cursor: pointer;
 }
 
-.main__content {
+.main {
   min-height: 80vh;
   width: 100%;
   background-color: #dcdde1;
@@ -54,10 +54,14 @@ html {
   transform: translate(-50%, -50%);
 }
 
-.all-books > button {
+.all-books > a {
+  display: block;
+  line-height: 150px;
+  text-align: center;
+  text-decoration: none;
   width: 24%;
   height: 150px;
-  padding: 3px 5px;
+  padding: 0;
   font-size: 20px;
   border-radius: 5px;
   border: 2px solid #192a56;
@@ -67,7 +71,7 @@ html {
   box-shadow: 2px 4px 10px #000;
 }
 
-.all-books > button:hover {
+.all-books > a:hover {
   background-color: #192a56;
   color: #fff;
   border: 2px solid #0a1021;
