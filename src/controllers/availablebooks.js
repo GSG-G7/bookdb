@@ -4,7 +4,8 @@ const {
 
 
 exports.availablebooks = (req, res) => {
-  getAvailableBooks().then((result) => res.render('availablebooks', {
-    book: result.rows,
-  }));
+  getAvailableBooks()
+    .then((result) => res.render('availablebooks', {
+      book: result.rows,
+    }));
 };

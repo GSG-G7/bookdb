@@ -4,15 +4,15 @@ const {
 
 require('env2')('./config.env');
 
-// console.log(Pool());
 // const dbUrl = process.env.DB_URL;
 
+let dbUrl = '';
 if (process.env.NODE_ENV === 'test') {
   dbUrl = process.env.TEST_DB_URL;
 } else if (process.env.NODE_ENV === 'development') {
   dbUrl = process.env.DB_URL;
 } else {
-  dbUrl = "";
+  dbUrl = '';
 }
 
 if (!dbUrl) {
