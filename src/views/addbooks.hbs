@@ -1,0 +1,38 @@
+ <div id="container">
+    <div class="form-wrap">
+      <h1>Add Book</h1>
+      <p>It's free and only takes a minute</p>
+      
+      <form action="/addbooks" method="POST">
+        <div class="form-group">
+          <label for="book-name">Book Name</label>
+          <input type="text" id="book-name">
+        </div>
+
+        <div class="form-group">
+          <label for="author-name">Author name</label>
+          <input type="text" id="author-name">
+        </div>
+        
+        <div class="form-group">
+          <label for="release-date">Release date</label>
+          <input type="date" id="release-date">
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input type="text" id="category">
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea name="book_description" id="description" cols="30" rows="10"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Sign Up</button>
+        
+        <P class="bottom-text">By clicking the add button you agree to our <a href="#">Terms & Conditions</a>
+          and <a href="#">Privacy Policy</a></P>
+      
+      </form>
+    </div>

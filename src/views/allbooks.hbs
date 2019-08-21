@@ -1,0 +1,23 @@
+<div class="container">
+  {{#each book}}
+    <div class="book">
+      <div class="image-container">
+          <img src="https://covers.oreillystatic.com/images/0636920015956/lrg.jpg" alt="">
+        </div>
+
+      <div class='content'>
+        <p class="id">{{this.id}}</p>
+        <h2 class="name">{{this.name}}</h2>
+        <p class="author-id">{{this.author_id}}</p>
+        <p class="release-date">{{this.release_date}}</p>
+        <p class="category">{{this.category}}</p>
+        <p class="description">{{this.book_description}}</p> 
+        {{#if this.is_available}}
+        <button class="reserveBtn">Reserve it</button>
+        {{else}}
+          <button class="unreserveBtn">Unreserve</button>
+        {{/if}}
+      </div>
+    </div>
+  {{/each}}
+</div>
