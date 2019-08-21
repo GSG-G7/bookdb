@@ -9,8 +9,11 @@ tape('testing the home route', (t) => {
     .expect(200)
     .expect('Content-Type', /html/)
     .end((err, res) => {
-      t.error(err);
-      t.ok(res.text.includes('<button', 'the html file has buttons'));
-      t.end();
+      if (err) {
+        t.error(err);
+      } else {
+        t.ok(res.text.includes('<button', 'the html file has buttons'));
+        t.end();
+      }
     });
 });
