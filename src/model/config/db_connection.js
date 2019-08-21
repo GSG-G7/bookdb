@@ -1,30 +1,27 @@
-const {Pool} = require('pg');
+const {
+  Pool,
+} = require('pg');
 
 require('env2')('./config.env');
 
 // console.log(Pool());
-// let dbUrl = process.env.TEST_DB_URL;
+// const dbUrl = process.env.DB_URL;
 
-if(process.env.NODE_ENV === 'test'){
+if (process.env.NODE_ENV === 'test') {
   dbUrl = process.env.TEST_DB_URL;
-}
-
-else if(process.env.NODE_ENV === 'development'){
+} else if (process.env.NODE_ENV === 'development') {
   dbUrl = process.env.DB_URL;
-}
-
-else {
+} else {
   dbUrl = "";
 }
 
-if(!dbUrl){
+if (!dbUrl) {
   throw new Error('Enviroment variable DB_URL must be set');
 }
 
 const options = {
   connectionString: dbUrl,
-  ssl:true
+  ssl: true,
 };
 
 module.exports = new Pool(options);
-

@@ -15,10 +15,11 @@ CREATE TABLE book(
   release_date DATE ,
   date_of_add DATE,
   is_available BOOLEAN DEFAULT 'true',
-  category VARCHAR(255)
+  category VARCHAR(255),
+  book_description VARCHAR(255)
 );
 INSERT INTO author (author_name) VALUES ('fadi');
-INSERT INTO book (book_name,author_id,release_date,date_of_add,category)
- VALUES ('JAVA',1,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'computer sience');
+INSERT INTO book (book_name,author_id,release_date,date_of_add,category,book_description)
+ VALUES ('JAVA',1,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'computer sience','a good book in java');
 
 COMMIT;
