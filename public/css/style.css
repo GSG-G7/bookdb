@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: #273c75;
+  padding: 4px 10%;
+}
+
+.main-header__logo {
+  font-family: "Kreon", serif;
+  color: #fff;
+  text-shadow: 2px 4px #0a1021;
+}
+
+.main-header_list {
+  list-style: none;
+  display: flex;
+}
+
+.main-header_list > li {
+  margin-right: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.main__content {
+  min-height: 80vh;
+  width: 100%;
+  background-color: #dcdde1;
+  position: relative;
+}
+
+.all-books {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.all-books > button {
+  width: 24%;
+  height: 150px;
+  padding: 3px 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid #192a56;
+  cursor: pointer;
+  font-weight: 600;
+  outline: 0;
+  box-shadow: 2px 4px 10px #000;
+}
+
+.all-books > button:hover {
+  background-color: #192a56;
+  color: #fff;
+  border: 2px solid #0a1021;
+  box-shadow: 2px 4px 10px 5px #000;
+  transition: all 0.5s ease-out;
+}
+
+.footer {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #273c75;
+}
+
+.footer p {
+  color: #fff;
+  font-size: 90%;
+}
