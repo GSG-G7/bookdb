@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "NODE_ENV=test node ./tests/test.js |tap-spec",
-    "start":"NODE_ENV=production nodemon ./src/index.js",
-    "dev":"NODE_ENV=development nodemon ./src/index.js"
+    "start": "NODE_ENV=production nodemon ./src/index.js",
+    "dev": "NODE_ENV=development nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
