@@ -1,0 +1,29 @@
+<main class="main">
+  <section class="all-books">
+    <h1>All Books</h1>
+    <div class="container">
+      {{#each book}}
+          <div class="book">
+              <p>{{this.id}}</p>
+              <h2>{{this.name}}</h2>
+              <p>this.author_id</p>
+              <p>this.release_date</p>
+              <p>this.category</p>
+              {{#if this.is_available}}
+              <button class="reserveBtn">Reserve it</button>
+              {{else}}
+              <button class="unreserveBtn">Unreserve</button>
+              {{/if}}
+          </div>
+      {{/each}}
+    </div>
+  </section>
+  
+  <aside>
+    <div class="aside-btns">
+      <button class="add-book-btn">Add Book</button>
+      <button class="available-btn">Get Available Books</button>
+      <button class="reserved-btn">Get Reserved Books</button>
+    </div>
+  </aside>
+</main>
