@@ -13,7 +13,7 @@ CREATE TABLE book(
   book_name VARCHAR(255) NOT NULL,
   author_id INTEGER REFERENCES author (id),
   release_date DATE ,
-  date_of_add DATE,
+  date_of_add DATE DEFAULT CURRENT_TIMESTAMP,
   is_available BOOLEAN DEFAULT 'true',
   category VARCHAR(255),
   book_description VARCHAR(255)
