@@ -1,18 +1,19 @@
-const { Router } = require('express');
+const express = require('express');
 const { home } = require('./home');
 const { addbooks } = require('./addbooks');
 const { availablebooks } = require('./availablebooks');
 const { reservedbooks } = require('./reservedbooks');
 const { clientError, serverError } = require('./errors');
 
+const router = express.Router();
 
-Router.get('/', home);
-Router.get('/add-books', addbooks);
-Router.get('/available-books', availablebooks);
-Router.get('/reserved-books', reservedbooks);
+router.get('/', home);
+router.get('/add-books', addbooks);
+router.get('/available-books', availablebooks);
+router.get('/reserved-books', reservedbooks);
 
 
-Router.use(clientError);
-Router.use(serverError);
+router.use(clientError);
+router.use(serverError);
 
-module.exports = Router;
+module.exports = router;
