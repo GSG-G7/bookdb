@@ -1,5 +1,7 @@
 const fs = require('fs');
-const { join } = require('path');
+const {
+  join,
+} = require('path');
 
 const buildDatabase = () => {
   const connection = require('./db_connection');
