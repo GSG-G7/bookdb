@@ -1,7 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const { join } = require('path');
-const dbConnection = require('./model/config/db_connection');
 const router = require('./controllers');
 
 const app = express();
@@ -26,13 +25,6 @@ app.engine(
   }),
 );
 
-
-app.get('/', (req, res) => {
-  res.render('home');
-  // dbConnection
-  //   .query('select * from book')
-  //   .then((result) => res.send(result.rows));
-});
-// app.use(router);
+app.use(router);
 
 module.exports = app;
