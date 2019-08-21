@@ -1,6 +1,6 @@
 const express = require('express');
 const dbConnection = require('../src/model/db_connection');
-const router = require('./controllers/index');
+const router = require('./controllers');
 
 const app = express();
 
