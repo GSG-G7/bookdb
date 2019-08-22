@@ -35,7 +35,6 @@ tape('Test get available books', (t) => {
     .then(() => getAvailableBooks()
       .then((res) => t.deepEqual(res.rows[0].is_available, expected, 'Book should contain available book'))
       .then(() => t.end()))
-    .catch(t.error)
     .catch(t.error);
 });
 tape('Test get reserved books', (t) => {
@@ -45,7 +44,6 @@ tape('Test get reserved books', (t) => {
     .then(() => getReservedBooks()
       .then((res) => t.deepEqual(res.rows[0].is_available, expected, 'Book should contain reserved book'))
       .then(() => t.end()))
-    .catch(t.error)
     .catch(t.error);
 });
 
