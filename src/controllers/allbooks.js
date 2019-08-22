@@ -1,3 +1,11 @@
+const {
+  getAllBooks,
+} = require('../model/quires/getdata');
+
+
 exports.allbooks = (req, res) => {
-  res.render('allbooks');
+  getAllBooks()
+    .then((result) => res.render('allbooks', {
+      book: result.rows,
+    }));
 };
