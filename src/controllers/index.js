@@ -1,27 +1,15 @@
 const express = require('express');
 
-const {
-  home,
-} = require('./home');
-const {
-  addbookpage,
-} = require('./addbookpage');
-const {
-  allbooks,
-} = require('./allbooks');
-const {
-  availablebooks,
-} = require('./availablebooks');
-const {
-  reservedbooks,
-} = require('./reservedbooks');
+const { home } = require('./home');
+const { addbookpage } = require('./addbookpage');
+const { allbooks } = require('./allbooks');
+const { availablebooks } = require('./availablebooks');
+const { reservedbooks } = require('./reservedbooks');
 const {
   clientError,
   serverError,
 } = require('./errors');
-const {
-  addbook,
-} = require('./addbook');
+const { addbook } = require('./addbook');
 
 const router = express.Router();
 

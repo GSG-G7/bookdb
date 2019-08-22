@@ -1,9 +1,9 @@
 <div class="container">
   {{#each book}}
-    {{#if !this.is_available}}
+    {{#unless this.is_available}}
       <div class="book">
         <div class="image-container">
-          <img src="https://covers.oreillystatic.com/images/0636920015956/lrg.jpg" alt="">
+          <img class="book_image" src="https://covers.oreillystatic.com/images/0636920015956/lrg.jpg" alt="">
         </div>
         <div class='content'>
           <p class="id">{{this.id}}</p>
@@ -15,6 +15,6 @@
           <button class="reserveBtn">un reserve</button>
         </div>
       </div>
-    {{/if}}
+    {{/unless}}
   {{/each}}
 </div>

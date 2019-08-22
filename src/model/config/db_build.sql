@@ -21,5 +21,7 @@ CREATE TABLE book(
 INSERT INTO author (author_name) VALUES ('fadi');
 INSERT INTO book (book_name,author_id,release_date,date_of_add,category,book_description)
  VALUES ('JAVA',1,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'computer sience','a good book in java');
+INSERT INTO book (book_name,author_id,release_date,date_of_add,category,is_available,book_description)
+ VALUES ('C++',1,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'computer sience',false,'Introduction to C++');
 
 COMMIT;

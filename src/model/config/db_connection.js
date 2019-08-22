@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'test') {
 } else if (process.env.NODE_ENV === 'development') {
   dbUrl = process.env.DB_URL;
 } else {
-  dbUrl = '';
+  dbUrl = process.env.DATABASE_URL;
 }
 
 if (!dbUrl) {
